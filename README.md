@@ -11,7 +11,7 @@ Usage
 
 2. Install archetype into local repository:
 
-`target/generated-sources/archetype`
+`cd target/generated-sources/archetype`
 
 `mvn install`
 
