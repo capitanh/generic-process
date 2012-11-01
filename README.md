@@ -5,7 +5,7 @@ Maven archetype for java command line process
 
 Usage
 ---------------
-1. Generate mvn archetype from project:
+1. Generate mvn archetype from project
 
 `mvn archetype:create-from-project`
 
