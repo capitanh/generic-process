@@ -1,4 +1,4 @@
-package net.mikasa.gpa;
+package net.mikasa.genericprocess;
 
 import java.util.Date;
 
