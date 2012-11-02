@@ -28,7 +28,7 @@
 			<unpack>false</unpack>
 			<scope>runtime</scope>
 			<excludes>
-				<exclude>${groupId}:${artifactId}</exclude>
+				<exclude>${project.groupId}:${project.artifactId}</exclude>
 			</excludes>
 		</dependencySet>
 	</dependencySets>
