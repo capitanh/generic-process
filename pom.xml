@@ -8,6 +8,7 @@
   <name>Generic process maven archetype</name>
   <url>http://maven.apache.org</url>
 
+	
 	<!-- =================== Build config =================== -->
 	<build>
 		<finalName>${project.artifactId}</finalName>
