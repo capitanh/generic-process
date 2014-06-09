@@ -15,6 +15,13 @@
 		<!-- Application settings -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<!-- =================== Source code management =================== -->
+	<scm>
+		<connection>scm:git:https://github.com/capitanh/generic-process</connection>
+		<developerConnection>scm:git:https://github.com/capitanh/generic-process</developerConnection>
+		<url>https://github.com/capitanh/generic-process</url>		
+	</scm>		
 	
 	<!-- =================== Build config =================== -->
 	<build>
@@ -41,6 +48,21 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<!-- Build Number -->
+			<plugin>
+				<groupId>ru.concerteza.buildnumber</groupId>
+				<artifactId>maven-jgit-buildnumber-plugin</artifactId>
+				<version>1.2.7</version>
+				<executions>
+					<execution>
+						<id>git-buildnumber</id>
+						<goals>
+							<goal>extract-buildnumber</goal>
+						</goals>
+						<phase>prepare-package</phase>
+					</execution>
+				</executions>
+			</plugin> 						
 			<!-- Manifest config for AppInfo-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -56,10 +78,14 @@
 						<manifestEntries>
 							<Specification-Title>${project.name}</Specification-Title>
 							<Specification-Version>${project.version}</Specification-Version>
-							<Build-Number>${BUILD_NUMBER}</Build-Number>
-							<Build-Date>${BUILD_ID}</Build-Date>
-							<SCM-Revision>${SVN_REVISION}</SCM-Revision>
-							<Job-Name>${JOB_NAME}</Job-Name>
+							<Specification-Vendor>${project.specification_vendor}</Specification-Vendor>
+							<Implementation-Title>${project.groupId}.${project.artifactId}</Implementation-Title>
+							<Implementation-Version>${git.revision}</Implementation-Version>
+							<Implementation-Vendor>${project.implementation_vendor}</Implementation-Vendor>
+							<X-Git-Branch>${git.branch}</X-Git-Branch>
+							<X-Git-Tag>${git.tag}</X-Git-Tag>
+							<X-Git-Commits-Count>${git.commitsCount}</X-Git-Commits-Count>							
+							<build-number>${git.buildnumber}</build-number>
 						</manifestEntries>
 					</archive>
 				</configuration>
