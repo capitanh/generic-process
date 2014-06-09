@@ -3,7 +3,7 @@
 	<formats>
 		<format>dir</format>
 	</formats>
-	<baseDirectory>${basedir}/dist</baseDirectory>
+	<baseDirectory>dist</baseDirectory>
 	<fileSets>
 		<fileSet>
 			<directory>target</directory>
