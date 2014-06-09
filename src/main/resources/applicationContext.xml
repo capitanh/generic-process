@@ -17,15 +17,13 @@
 		http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
 		
 	<!-- ======================= General Config ======================= -->
-	<!-- 
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>file:config.properties</value>
+				<value>classpath:config.properties</value>
 			</list>
 		</property>
 	</bean>
-	-->
 	<!-- App Info -->
 	<bean id="applicationTypeSpecificManifestReader" class="net.sf.appinfo.reader.JarManifestReader">
     <constructor-arg value="${project.groupId}.${project.artifactId}.MainProcess"/>
