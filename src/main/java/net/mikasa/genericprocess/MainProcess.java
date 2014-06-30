@@ -29,7 +29,7 @@ public class MainProcess
 		log.info("###########################################################################################################");
 		log.info("# Main Process                                                                                            #");
 		log.info("# Version: " + appInfoText + " #");
-		log.info("# Process start date: " + start.toString() + "                                                       #");
+		log.info("# Process start date: " + start.toString() + "                                                        #");
 		log.info("###########################################################################################################");
 		
 		//Main Process
