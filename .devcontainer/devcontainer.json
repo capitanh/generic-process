@@ -1,4 +1,4 @@
 {
-  "name": "generic-process dev container"
+  "name": "generic-process dev container",
   "image": "mcr.microsoft.com/vscode/devcontainers/java"
 }
