@@ -1,4 +1,13 @@
 {
   "name": "generic-process dev container",
-  "image": "mcr.microsoft.com/vscode/devcontainers/java"
+  "image": "mcr.microsoft.com/vscode/devcontainers/java",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "installMaven": "true",
+      "installGradle": "false"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+  }  
 }
